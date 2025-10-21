@@ -1,3 +1,7 @@
 # -*- coding: utf-8 -*-
 
-from . import models
+from . import Adjunto
+from . import Comentario
+from . import Encuesta
+from . import Estadisticas
+from . import Incidencia
