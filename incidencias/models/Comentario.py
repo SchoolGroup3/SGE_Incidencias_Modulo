@@ -8,5 +8,5 @@ class Comentario(models.Model):
     contenido = fields.Text(string = 'Introduce la descripción')
     fecha = fields.Datetime(string = 'Fecha de hoy')
 
-    #id_incidencia = fields.Many2one(comodel_name = 'incidencias.incidencia', string = 'Incidencia', required = True, ondelete = 'cascade')
-    #id_empleado = fields.Many2one(comodel_name= 'incidencias.empleado', string = "Empleado", required = True, ondelete = "cascade")
+    id_incidencia = fields.Many2one(comodel_name = 'incidencias.incidencia', string = 'Incidencia', required = True, ondelete = 'cascade')
+    id_empleado = fields.Many2one(comodel_name= 'incidencias.employee', string = "Empleado", required = True, ondelete = "cascade")
