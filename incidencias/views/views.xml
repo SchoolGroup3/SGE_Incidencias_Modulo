@@ -15,7 +15,7 @@
     </record>
 -->
 
-    <!-- actions opening views on models -->
+    <!-- actions oening views on models -->
 <!--
     <record model="ir.actions.act_window" id="incidencias.action_window">
       <field name="name">incidencias window</field>

@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_incidencias_incidencias,incidencias.incidencias,model_incidencias_incidencias,base.group_user,1,1,1,1
+access_admin,Access Admin,model_incidencias_admin,admin_group,1,1,1,1
+access_employee,Access Employee,model_incidencias_employee,employee_group,1,1,1,1
