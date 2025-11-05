@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_incidencias" model="ir.actions.act_window">
+        <field name="name">Incidencias</field>
+        <field name="res_model">incidencias.incidencia</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

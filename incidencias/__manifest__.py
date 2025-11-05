@@ -26,6 +26,8 @@
     'data': [
         'security/employee_security.xml',
         'security/ir.model.access.csv',
+        'views/actions.xml',
+        'views/menu.xml',
         #'views/views.xml',
         #'views/templates.xml',
     ],

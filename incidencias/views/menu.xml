@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_principal" name="Incidencias" sequence="10"/>
+
+    <menuitem id="menu_incidencias" name="Gestion Incidencias" parent="menu_principal" sequence="10" 
+                action="action_incidencias"/>
+</odoo>
