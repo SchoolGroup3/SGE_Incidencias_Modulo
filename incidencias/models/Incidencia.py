@@ -10,4 +10,4 @@ class Incidencia(models.Model):
     estado_actual = fields.Text(string = 'Introduce el estado actual')
 
     id_departamento = fields.Many2one(comodel_name = 'hr.department', string = 'Incidencia', required = True, ondelete = 'cascade')
-    id_empleado_origen = fields.Many2one(comodel_name= 'incidencias.employee', string = "Empleado", required = True, ondelete = "cascade")
+    id_empleado_origen = fields.Many2one(comodel_name= 'hr.employee', string = "Empleado", required = True, ondelete = "cascade")
