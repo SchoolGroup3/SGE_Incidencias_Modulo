@@ -24,7 +24,7 @@
 
     # always loaded
     'data': [
-        'security/employee_security.xml',
+        'security/groups.xml',
         'security/ir.model.access.csv',
         'views/actions.xml',
         'views/menu.xml',

@@ -5,4 +5,34 @@
         <field name="res_model">incidencias.incidencia</field>
         <field name="view_mode">tree,form</field>
     </record>
+
+    <record id="action_estadisticas" model="ir.actions.act_window">
+        <field name="name">Estadisticas</field>
+        <field name="res_model">incidencias.estadisticas</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_encuestas" model="ir.actions.act_window">
+        <field name="name">Encuesta</field>
+        <field name="res_model">incidencias.encuesta</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_comentarios" model="ir.actions.act_window">
+        <field name="name">Encuesta</field>
+        <field name="res_model">incidencias.encuesta</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_adjuntos" model="ir.actions.act_window">
+        <field name="name">Adjunto</field>
+        <field name="res_model">incidencias.adjunto</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_employees" model="ir.actions.act_window">
+        <field name="name">Employee</field>
+        <field name="res_model">hr.employee</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 </odoo>

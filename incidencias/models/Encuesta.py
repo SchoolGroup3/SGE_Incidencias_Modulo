@@ -12,5 +12,3 @@ class Encuesta(models.Model):
 
     #campos relacionales
     id_incidencia = fields.Many2one(comodel_name = "incidencias.incidencia", string = 'Incidencia', required = True, ondelete = 'cascade')
-
-
