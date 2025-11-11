@@ -5,9 +5,9 @@ class Empleado(models.Model):
 
     descripcion = fields.Text(string = 'Introduce la descripción')
 
-    id_incidencia = fields.Many2many(
-        comodel_name = 'incidencias.incidencia',
-        field_name = 'id_incidencia',
+    id_estadisticas = fields.Many2many(
+        comodel_name = 'incidencias.estadisticas',
+        field_name = 'id_estadisticas',
         required=True, 
         ondelete = 'cascade'
     )
