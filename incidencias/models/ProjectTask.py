@@ -16,4 +16,7 @@ class ProjectTask(models.Model):
     comentario = fields.Text(string="Comentario", related="encuesta_id.comentario")
     puntuacion = fields.Selection(string="Puntuacion", related="encuesta_id.puntuacion")
 
+    adjunto_id = fields.One2many(comodel_name="incidencias.adjunto", inverse_name="proyecto", string="Adjunto")
 
+    nombre_archivo = fields.Char(string="Nombre del Archivo", related="adjunto_id.nombre_archivo")
+    ruta_archivo = fields.Binary(string="Ruta del Archivo", related="adjunto_id.ruta_archivo")
