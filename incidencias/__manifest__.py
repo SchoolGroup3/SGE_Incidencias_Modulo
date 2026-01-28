@@ -20,7 +20,7 @@
     'version': '0.2',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'hr'],
+    'depends': ['project', 'hr'],
 
     # always loaded
     'data': [
@@ -28,6 +28,7 @@
         'security/ir.model.access.csv',
         'views/actions.xml',
         'views/menu.xml',
+        'views/encuestaView.xml',
         #'views/views.xml',
         #'views/templates.xml',
     ],

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+            <!-- VISTA KANBAN -->
+        <record id="encuesta_kanban" model="ir.ui.view">
+            <field name="name">encuesta.kanban</field>
+            <field name="model">incidencias.encuesta</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="puntuacion" widget="priority"/>
+                    <field name="fecha_respuesta"/>
+                    <field name="id"/>
+                    <field name="ruta_archivo"/>
+
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="d-flex">
+
+                                    <div class="p-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style="width: 20px; height: 20px;"><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>
+                                        <strong><field name="name"/></strong>
+
+                                        <div class="mt-1">
+                                            <field name="puntuacion" widget="priority"/>
+                                        </div>
+
+                                        <div class="mt-1">
+                                            <small><field name="fecha_respuesta" widget="date"/></small>
+                                        </div>
+                                    </div>
+
+                                    <!-- Imagen -->
+                                    <div class="p-2">
+                                        <div t-if="record.ruta_archivo.raw_value">
+                                            <div class="border rounded" style="width: 60px; height: 60px;">
+                                                <field name="ruta_archivo" widget="image"/>
+                                            </div>
+                                        </div>
+                                        <div t-else="">
+                                            <div class="border rounded bg-light d-flex align-items-center justify-content-center"
+                                                 style="width: 60px; height: 60px;">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <!-- VISTA TREE -->
+        <record id="encuesta_tree" model="ir.ui.view">
+            <field name="name">encuesta.tree</field>
+            <field name="model">incidencias.encuesta</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="puntuacion" widget="priority"/>
+                    <field name="comentario"/>
+                    <field name="fecha_respuesta"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- VISTA FORM  -->
+        <record id="encuesta_form" model="ir.ui.view">
+            <field name="name">encuesta.form</field>
+            <field name="model">incidencias.encuesta</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="puntuacion" widget="priority"/>
+                                <field name="fecha_respuesta"/>
+                                <field name="x_id_incidencia"/>
+                            </group>
+                            <group>
+                                <field name="comentario"/>
+                                <field name="proyecto"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Archivo">
+                                <group>
+                                    <field name="ruta_archivo"/>
+                                </group>
+                            </page>
+
+                            <page string="Information">
+                                <group>
+                                    <field name="create_uid" readonly="1"/>
+                                    <field name="create_date" readonly="1"/>
+                                    <field name="write_uid" readonly="1"/>
+                                    <field name="write_date" readonly="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- VISTA SEARCH -->
+        <record id="encuesta_search" model="ir.ui.view">
+            <field name="name">encuesta.search</field>
+            <field name="model">incidencias.encuesta</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

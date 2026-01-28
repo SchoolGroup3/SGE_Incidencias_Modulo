@@ -35,4 +35,42 @@
         <field name="res_model">hr.employee</field>
         <field name="view_mode">tree,form,kanban</field>
     </record>
+
+    <record id="inherit_incidencias" model="ir.ui.view">
+        <field name="name">Incidencias</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Incidencias">
+                    <field name="incidencias_id" widget="one2many_list" readonly="1">
+                        <tree>
+                            <field name="titulo" width="80" string="Titulo"/>
+                            <field name="descripcion" width="80" string="Descripcion"/>
+                            <field name="fecha_creacion" width="80" string="Fecha"/>
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="inherit_encuesta" model="ir.ui.view">
+        <field name="name">Encuestas</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Encuestas">
+                    <field name="encuesta_id" widget="one2many_list" readonly="1">
+                        <tree>
+
+                            <field name="comentario" width="80" string="Comentario"/>
+                            <field name="puntuacion" width="80" string="Puntuacion"/>
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
 </odoo>

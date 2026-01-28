@@ -6,3 +6,4 @@ from . import Encuesta
 from . import Estadisticas
 from . import Incidencia
 from . import Empleado
+from . import ProjectTask

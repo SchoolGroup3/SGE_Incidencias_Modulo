@@ -11,3 +11,5 @@ class Incidencia(models.Model):
 
     id_departamento = fields.Many2one(comodel_name = 'hr.department', string = 'Incidencia', required = True, ondelete = 'cascade')
     id_empleado_origen = fields.Many2one(comodel_name= 'hr.employee', string = "Empleado", required = True, ondelete = "cascade")
+
+    proyecto = fields.Many2one(comodel_name='project.task', string='Tarea de Proyecto', required=False, ondelete='cascade')

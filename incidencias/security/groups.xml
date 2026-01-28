@@ -8,6 +8,10 @@
         <field name="name">Participant Access</field>
     </record>
 
+    <record id="invitado_group" model="res.groups">
+        <field name="name">Invitado Access</field>
+    </record>
+
     <record id="admin_access" model="ir.model.access">
         <field name="name">Admin Access</field>
         <field name="model_id" ref="model_incidencias_incidencia"/>
@@ -18,5 +22,11 @@
         <field name="name">Participant Access</field>
         <field name="model_id" ref="model_incidencias_incidencia"/>
         <field name="group_id" ref="participant_group"/>
+    </record>
+
+    <record id="invitado_access" model="ir.model.access">
+        <field name="name">Invitado Access</field>
+        <field name="model_id" ref="model_incidencias_incidencia"/>
+        <field name="group_id" ref="invitado_group"/>
     </record>
 </odoo>
