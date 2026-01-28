@@ -29,6 +29,7 @@
         'views/actions.xml',
         'views/menu.xml',
         'views/encuestaView.xml',
+        'views/adjuntoView.xml',
         #'views/views.xml',
         #'views/templates.xml',
     ],
