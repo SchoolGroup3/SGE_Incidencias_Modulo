@@ -19,8 +19,8 @@
     </record>
 
     <record id="action_comentarios" model="ir.actions.act_window">
-        <field name="name">Encuesta</field>
-        <field name="res_model">incidencias.encuesta</field>
+        <field name="name">Comentarios</field>
+        <field name="res_model">incidencias.comentario</field>
         <field name="view_mode">tree,form,kanban</field>
     </record>
 

@@ -25,7 +25,7 @@ class Encuesta(models.Model):
 
     name = fields.Text(string = 'Nombre de la encuesta', required = True)
     comentario = fields.Text(string = 'Introduce la descripción')
-    fecha_respuesta =fields.Datetime(string = 'Fehca de hoy')
+    fecha_respuesta =fields.Datetime(string = 'Fecha de hoy')
     ruta_archivo = fields.Binary(string="Ruta del Archivo")
 
     #campos relacionales

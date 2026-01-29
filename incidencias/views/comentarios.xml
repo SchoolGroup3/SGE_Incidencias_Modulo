@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!--Vista Lista/Tree-->
+    <record model="ir.ui.view" id="comentario_list">
+      <field name="name">comentario list</field>
+      <field name="model">incidencias.comentario</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="contenido"/>
+          <field name="fecha"/>
+          <field name="id_incidencia"/>
+          <field name="id_empleado"/>
+        </tree>
+      </field>
+    </record>
+
+    <!--Vista Formulario-->
+    <record model="ir.ui.view" id="comentario_form">
+      <field name="name">comentario form</field>
+      <field name="model">incidencias.comentario</field>
+      <field name="arch" type="xml">
+        <form>
+         <sheet>
+            <group>
+              <group>
+                <field name="fecha" widget="date"/>
+              </group>
+              <group>
+                <group>
+                  <field name="id_incidencia"/>
+                </group>
+                <group>
+                  <field name="id_empleado"/>
+                </group>
+              </group>
+            </group>
+            <field name="contenido" placeholder="Contenido del comentario" style="font-size: min(2vw, 1.3rem);" onchange="1"/>
+         </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!--Vista Kanban-->
+    <record model="ir.ui.view" id="comentario_kanban">
+      <field name="name">comentario kanban</field>
+      <field name="model">incidencias.comentario</field>
+      <field name="arch" type="xml">
+        <kanban>
+          <templates>
+            <t t-name="kanban-box">
+              <div class="oe_kanban_global_click">
+                <div class="o_kanban_record_body">
+                    <div class="d-flex">
+                      <div class="me-3">
+                        <i class="fa fa-comment fa-3x"/>
+                      </div>
+                      <div>
+                        <strong><field name="id_empleado"/></strong>
+                        <div><field name="id_incidencia"/></div>
+                        <div><field name="fecha" widget="date"/></div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <!--Vista Search-->
+    <record model="ir.ui.view" id="comentario_search">
+      <field name="name">comentarios search</field>
+      <field name="model">incidencias.comentario</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="id_empleado"/>
+          <field name="id_incidencia"/>
+        </search>
+      </field>
+    </record>
+  </data>
+</odoo>
