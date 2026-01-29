@@ -1,3 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
   <!-- Adjunto Tree-->
     <record id="adjunto_tree" model="ir.ui.view">
         <field name="name">incidencias.adjunto.tree</field>
@@ -91,3 +94,5 @@
         </search>
     </field>
     </record>
+  </data>
+</odoo>

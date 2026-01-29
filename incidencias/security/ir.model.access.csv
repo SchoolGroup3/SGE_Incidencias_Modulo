@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
 access_admin_incidencia,Access Admin Incidencia,model_incidencias_incidencia,admin_group,1,1,1,1
 access_participant_incidencia,Access Participant Incidencia,model_incidencias_incidencia,participant_group,1,0,0,0
 
@@ -7,7 +8,6 @@ access_participant_estadistica,Access Participant Estadistica,model_incidencias_
 
 access_admin_encuesta,Access Admin Encuesta,model_incidencias_encuesta,admin_group,1,1,1,1
 access_participant_encuesta,Access Participant Encuesta,model_incidencias_encuesta,participant_group,1,0,0,0
-access_invitado_encuesta,Access Invitado Encuesta,model_incidencias_encuesta,invitado_group,1,0,0,0
 
 access_admin_comentario,Access Admin Comentario,model_incidencias_comentario,admin_group,1,1,1,1
 access_participant_comentario,Access Participant Comentario,model_incidencias_comentario,participant_group,1,0,0,0
@@ -17,3 +17,6 @@ access_participant_adjunto,Access Participant Incidencia,model_incidencias_adjun
 
 access_admin_employee,Access Admin Employee,model_hr_employee,admin_group,1,1,1,1
 access_participant_employee,Access Participant Employee,model_hr_employee,participant_group,1,0,0,0
+
+access_guest_incidencia,Access Guest Incidencia,model_incidencias_incidencia,guest_group,1,0,0,0
+access_guest_comentario,Access Guest Comentario,model_incidencias_comentario,guest_group,1,1,0,0
