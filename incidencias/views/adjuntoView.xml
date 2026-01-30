@@ -54,25 +54,28 @@
     </field>
 </record>
     <!-- Adjunto Kanban-->
-    <record id="adjunto_kanban" model="ir.ui.view">
+<!-- Adjunto Kanban-->
+<record id="adjunto_kanban" model="ir.ui.view">
     <field name="name">incidencias.adjunto.kanban</field>
     <field name="model">incidencias.adjunto</field>
     <field name="arch" type="xml">
         <kanban class="o_kanban_small_column">
             <templates>
                 <t t-name="kanban-box">
-                    <div class="oe_kanban_card" style="padding:10px;">
-                        <div style="text-align:center; font-weight:bold; margin-bottom:8px;">
-                            <span class="fa fa-paperclip" style="margin-right:5px;"/>
-                            <field name="name"/>
-                        </div>
-                        <div style="display:flex; justify-content:center; align-items:center; margin-bottom:8px;">
-                            <field name="ruta_archivo" filename="nombre_archivo" widget="image"
-                                   style="max-height:100px; max-width:100px; border-radius:6px;"/>
-                        </div>
-                        <div style="text-align:center; font-size:12px;">
-                            <span class="fa fa-calendar" style="margin-right:4px;"/>
-                            <field name="fecha_subida"/>
+                    <div class="oe_kanban_card oe_kanban_global_click" style="padding:10px;">
+                        <div class="o_kanban_details">
+                            <div style="text-align:center; font-weight:bold; margin-bottom:8px;">
+                                <span class="fa fa-paperclip" style="margin-right:5px;"/>
+                                <field name="name"/>
+                            </div>
+                            <div style="display:flex; justify-content:center; align-items:center; margin-bottom:8px;">
+                                <field name="ruta_archivo" filename="nombre_archivo" widget="image"
+                                    style="max-height:100px; max-width:100px; border-radius:6px;"/>
+                            </div>
+                            <div style="text-align:center; font-size:12px;">
+                                <span class="fa fa-calendar" style="margin-right:4px;"/>
+                                <field name="fecha_subida"/>
+                            </div>
                         </div>
                     </div>
                 </t>
