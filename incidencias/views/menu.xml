@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <menuitem id="menu_principal" name="Incidencias" sequence="10"/>
 
@@ -7,7 +7,7 @@
 
     <menuitem id="menu_estadisticas" name="Gestion Estadisticas" parent="menu_principal" sequence="10" 
                 action="action_estadisticas"/>
-    
+
     <menuitem id="menu_encuestas" name="Gestion Encuestas" parent="menu_principal" sequence="10" 
                 action="action_encuestas"/>
 
@@ -16,7 +16,7 @@
 
     <menuitem id="menu_adjuntos" name="Gestion Adjuntos" parent="menu_principal" sequence="10" 
                 action="action_adjuntos"/>
-    
+
     <menuitem id="menu_employees" name="Gestion Employees" parent="menu_principal" sequence="10" 
                 action="action_employees"/>
 </odoo>

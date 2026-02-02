@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <record id="action_incidencias" model="ir.actions.act_window">
         <field name="name">Incidencias</field>
@@ -45,7 +45,7 @@
                 <page string="Incidencias">
                     <field name="incidencias_id" widget="one2many_list" readonly="1">
                         <tree>
-                            <field name="name" width="80" string="Titulo"/>
+                            <field name="titulo" width="80" string="Titulo"/>
                             <field name="descripcion" width="80" string="Descripcion"/>
                             <field name="fecha_creacion" width="80" string="Fecha"/>
                         </tree>
@@ -73,7 +73,7 @@
             </notebook>
         </field>
     </record>
-        <!-- Vista Heredada de Projectos-->
+    <!-- Vista Heredada de Projectos-->
     <record id="inherit_incidencias" model="ir.ui.view">
         <field name="name">Ajunto</field>
         <field name="model">project.task</field>
@@ -85,6 +85,23 @@
                         <tree>
                             <field name="nombre_archivo" string="Archivo" width="80"/>
                             <field name="ruta_archivo" string="Ruta" width="80"/>
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+
+    <record id="inherit_estadisticas" model="ir.ui.view">
+        <field name="name">Empleado</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Employees">
+                    <field name="estadistica_id" widget="many2one_list" readonly="1">
+                        <tree>
+                            <field name="nombre" width="50"/>
                         </tree>
                     </field>
                 </page>

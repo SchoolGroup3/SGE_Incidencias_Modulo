@@ -6,7 +6,7 @@ class Incidencia(models.Model):
     _name = 'incidencias.incidencia'
     _description = 'Guarda las incidencias'
 
-    name = fields.Text(string = 'Titulo', required = True)
+    titulo = fields.Text(string = 'Titulo', required = True)
     descripcion = fields.Text(string = 'Descripción', required = True)
     fecha_creacion =fields.Datetime(string = 'Fecha de creación', required = True)
     estado_actual = fields.Selection([
@@ -24,22 +24,22 @@ class Incidencia(models.Model):
     @api.onchange('fecha_creacion')
     def _onchange_date(self):
         if self.fecha_creacion:
-            self.name = re.sub(r'-\d{4}-\d{2}-\d{2}.*$', '', self.name)
-            self.name += f"-{str(self.fecha_creacion)}"
+            self.titulo = re.sub(r'-\d{4}-\d{2}-\d{2}.*$', '', self.titulo)
+            self.titulo += f"-{str(self.fecha_creacion)}"
 
-    @api.constrains('name')
+    @api.constrains('titulo')
     def _check_titulo_length(self):
-        if self.name and len(self.name) < 5:
+        if self.titulo and len(self.titulo) < 5:
             raise ValidationError('El titulo debe ser mas de 5 caracteres')
     
     @api.model
     def create(self, vals):
-        if 'name' in vals:
-            vals['name'] = vals['name'].replace(" ", "-")
+        if 'titulo' in vals:
+            vals['titulo'] = vals['titulo'].replace(" ", "-")
         
         return super(Incidencia, self).create(vals)
     def copy(self, default=None):
         if not default:
             default={}
-        default['name'] = f"Copia de {self.name}"
+        default['titulo'] = f"Copia de {self.titulo}"
         return super(Incidencia, self).copy(default)
