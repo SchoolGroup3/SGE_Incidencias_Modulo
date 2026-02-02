@@ -92,7 +92,7 @@
         </field>
     </record>
 
-    <record id="inherit.estadisticas" model="ir.ui.view">
+    <record id="inherit_estadisticas" model="ir.ui.view">
         <field name="name">Empleado</field>
         <field name="model">hr.employee</field>
         <field name="inherit_id" ref="hr.view_employee_form"/>
