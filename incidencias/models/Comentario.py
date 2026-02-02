@@ -7,7 +7,6 @@ class Comentario(models.Model):
     _name = 'incidencias.comentario'
     _description = 'Guarda los comentarios'
 
-    name = fields.Text(string = 'Titulo', required = True)
     contenido = fields.Text(string = 'Descripción', required = True)
     fecha = fields.Datetime(string = 'Fecha de hoy', required = True)
 
