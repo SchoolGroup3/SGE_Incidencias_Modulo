@@ -7,7 +7,7 @@
       <field name="model">incidencias.incidencia</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="titulo"/>
+          <field name="name"/>
           <field name="descripcion"/>
           <field name="fecha_creacion"/>
           <field name="estado_actual"/>
@@ -22,7 +22,7 @@
       <field name="arch" type="xml">
         <form>
          <sheet>
-            <field name="titulo" placeholder="Titulo del incidencia" style="font-size: min(4vw, 2.6rem);" onchange="1"/>
+            <field name="name" placeholder="Titulo del incidencia" style="font-size: min(4vw, 2.6rem);" onchange="1"/>
             <field name="descripcion" placeholder="Descripcion del incidencia" style="font-size: min(2vw, 1.3rem);" onchange="1"/>
             <group>
               <group>
@@ -70,7 +70,7 @@
                         <i class="fa fa-exclamation fa-5x"/>
                       </div>
                       <div>
-                        <strong><field name="titulo"/></strong>
+                        <strong><field name="name"/></strong>
                         <div><field name="estado_actual"/></div>
                         <div><field name="fecha_creacion" widget="date"/></div>
                       </div>
@@ -89,7 +89,7 @@
       <field name="model">incidencias.incidencia</field>
       <field name="arch" type="xml">
         <search>
-          <field name="titulo"/>
+          <field name="name"/>
           <field name="estado_actual"/>
           <field name="descripcion"/>
         </search>

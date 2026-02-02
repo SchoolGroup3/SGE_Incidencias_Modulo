@@ -7,6 +7,7 @@
       <field name="model">incidencias.comentario</field>
       <field name="arch" type="xml">
         <tree>
+          <field name="name"/>
           <field name="contenido"/>
           <field name="fecha"/>
           <field name="id_incidencia"/>
@@ -24,6 +25,9 @@
          <sheet>
             <group>
               <group>
+                <field name="name" placeholder="Titulo del comentario"/>
+              </group>
+              <group>
                 <field name="fecha" widget="date"/>
               </group>
               <group>
@@ -35,7 +39,7 @@
                 </group>
               </group>
             </group>
-            <field name="contenido" placeholder="Contenido del comentario" style="font-size: min(2vw, 1.3rem);" onchange="1"/>
+            <field name="contenido" placeholder="Contenido del comentario" style="font-size: min(2vw, 1.3rem);"/>
          </sheet>
         </form>
       </field>
