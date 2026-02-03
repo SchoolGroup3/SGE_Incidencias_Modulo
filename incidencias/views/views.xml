@@ -1,23 +1,10 @@
 ﻿<odoo>
     <data>
-        <record model="ir.ui.view" id="incidencias.list">
-            <field name="name">incidencias.list</field>
-            <field name="model">incidencias.incidencias</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="fecha"/>
-                    <field name="total_incidencias" class="fas fa-users"/>
-                    <field name="incidencias_finalizadas"/>
-                    <field name="tiempo_promedio_resolucion"/>
-                </tree>
-            </field>
-        </record>
-
-        <record model="ir.ui.view" id="estadisticas.form">
+        <record id="estadisticas_form" model="ir.ui.view">
             <field name="name">estadisticas.form</field>
             <field name="model">incidencias.estadisticas</field>
             <field name="arch" type="xml">
-                <form>
+                <form string="Estadísticas">
                     <sheet>
                         <group>
                             <field name="fecha"/>
@@ -30,7 +17,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="estadisticas.list">
+        <record id="estadisticas_list" model="ir.ui.view">
             <field name="name">estadisticas.list</field>
             <field name="model">incidencias.estadisticas</field>
             <field name="arch" type="xml">
@@ -43,7 +30,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="estadisticas.search">
+        <record id="estadisticas_search" model="ir.ui.view">
             <field name="name">estadisticas.search</field>
             <field name="model">incidencias.estadisticas</field>
             <field name="arch" type="xml">
@@ -56,7 +43,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="estadisticas.kanban">
+        <record id="estadisticas_kanban" model="ir.ui.view">
             <field name="name">estadisticas.kanban</field>
             <field name="model">incidencias.estadisticas</field>
             <field name="arch" type="xml">
@@ -84,39 +71,5 @@
                 </kanban>
             </field>
         </record>
-
-        <!-- actions opening views on models -->
-        <record model="ir.actions.act_window" id="incidencias.action_window">
-            <field name="name">incidencias.window</field>
-            <field name="res_model">incidencias.incidencias</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-
-        <!-- server action to the one above -->
-        <record model="ir.actions.server" id="incidencias.action_server">
-            <field name="name">incidencias.server</field>
-            <field name="model_id" ref="model_incidencias_incidencias"/>
-            <field name="state">code</field>
-            <field name="code">
-                action = {
-                "type": "ir.actions.act_window",
-                "view_mode": "tree,form",
-                "res_model": model._name,
-                }
-            </field>
-        </record>
-
-        <!-- Top menu item -->
-        <menuitem name="incidencias" id="incidencias.menu_root"/>
-
-        <!-- menu categories -->
-        <menuitem name="Menu 1" id="incidencias.menu_1" parent="incidencias.menu_root"/>
-        <menuitem name="Menu 2" id="incidencias.menu_2" parent="incidencias.menu_root"/>
-
-        <!-- actions -->
-        <menuitem name="List" id="incidencias.menu_1_list" parent="incidencias.menu_1"
-              action="incidencias.action_window"/>
-        <menuitem name="Server to list" id="incidencias" parent="incidencias.menu_2"
-              action="incidencias.action_server"/>
     </data>
 </odoo>

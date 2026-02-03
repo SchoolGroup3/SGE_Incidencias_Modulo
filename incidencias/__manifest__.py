@@ -32,7 +32,7 @@
         'views/adjuntoView.xml',
         'views/incidencias.xml',
         'views/comentarios.xml',
-        #'views/views.xml',
+        'views/views.xml',
         #'views/templates.xml',
     ],
     # only loaded in demonstration mode
