@@ -43,8 +43,6 @@ class Encuesta(models.Model):
     def _check_name(self):
         if len(self.name) < 4:
             raise ValidationError('El nombre es demasiado corto. Mínimo 4 caracteres.')
-        if len(self.name) > 15:
-            raise ValidationError('El nombre es demasiado largo. Máximo 15 caracteres.')
 
         patron = r'^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s_]+$'  # PONER QUE DEJE ESPACIOS
         if not re.match(patron, self.name):
