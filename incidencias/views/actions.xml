@@ -45,7 +45,7 @@
                 <page string="Incidencias">
                     <field name="incidencias_id" widget="one2many_list" readonly="1">
                         <tree>
-                            <field name="titulo" width="80" string="Titulo"/>
+                            <field name="name" width="80" string="Titulo"/>
                             <field name="descripcion" width="80" string="Descripcion"/>
                             <field name="fecha_creacion" width="80" string="Fecha"/>
                         </tree>
